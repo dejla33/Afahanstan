@@ -1,0 +1,679 @@
+body {
+  margin: 0;
+  font-family: 'Tajawal', sans-serif;
+  background:#000;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to left, #000, #d32f2f, #388e3c);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideIn 1s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 2px 4px #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d32f2f;
+}
+
+/* Map Placeholder */
+.map-placeholder {
+  height: 300px;
+  border: 4px dashed #aaa;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* 10 Provinces */
+.ten-provinces ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.ten-provinces li {
+  background: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: 2px solid #388e3c;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.ten-provinces li:hover {
+  background: #c8e6c9;
+  transform: scale(1.1);
+}
+
+/* Four Provinces */
+.province-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.province-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.province-card:hover {
+  transform: scale(1.05);
+}
+
+.province-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.province-card p {
+  background: #eee;
+  margin: 0;
+  padding: 0.6rem;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flag {
+  width: 60px;
+  border: 2px solid white;
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.bottom-image img {
+  width: 100%;
+  margin-top: 1rem;
+  border-top: 3px solid #d32f2f;
+}
+
+/* ==== Afghan Traditional Clothing Section ==== */
+
+.afghan-clothing-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+  background: linear-gradient(to bottom, #000000, #b71c1c, #1b5e20);
+  color: #fff;
+}
+
+.afghan-clothing-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.clothing-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.clothing-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.clothing-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clothing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+.clothing-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.clothing-card h3 {
+  background-color: #b71c1c;
+  color: white;
+  padding: 0.7rem;
+  margin: 0;
+}
+
+.clothing-card p {
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* ==== Afghan Traditional Clothing Section ==== */
+
+.afghan-clothing-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+  background: linear-gradient(to bottom, #000000, #b71c1c, #1b5e20);
+  color: #fff;
+}
+
+.afghan-clothing-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.clothing-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.clothing-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.clothing-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clothing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+.clothing-card img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.clothing-card h3 {
+  background-color: #b71c1c;
+  color: white;
+  padding: 0.7rem;
+  margin: 0;
+}
+
+.clothing-card p {
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+.afghan-history {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(to bottom right, #000000, #1c1c1c);
+  color: #f2f2f2;
+}
+
+.afghan-history h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  color: #ffd700;
+  text-shadow: 2px 2px 5px #000;
+  border-bottom: 4px solid #ff0000;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.afghan-history .dynasty {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #222, #000);
+  border-radius: 18px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.afghan-history .dynasty:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 35px rgba(0, 255, 0, 0.3);
+}
+
+.afghan-history .dynasty img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-right: 5px solid #ff0000;
+}
+
+.afghan-history .dynasty .text {
+  padding: 30px;
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.afghan-history .dynasty .text h3 {
+  font-size: 26px;
+  color: #00ff00;
+  margin-bottom: 15px;
+}
+
+.afghan-history .dynasty .text p {
+  font-size: 17px;
+  line-height: 1.7;
+  border-left: 4px solid #ffd700;
+  padding-left: 15px;
+  color: #e0e0e0;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .afghan-history .dynasty {
+    flex-direction: column;
+  }
+
+  .afghan-history .dynasty img {
+    border-right: none;
+    border-bottom: 4px solid #ff0000;
+  }
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+.afghan-foods-page {
+  --black: #0d0d0d;
+  --red: #c1121f;
+  --green: #007f5f;
+  --gold: #ffbe0b;
+  --gray: #1a1a1a;
+  --white: #ffffff;
+  --transition: 0.3s ease-in-out;
+  font-family: 'Exo 2', sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 50px 0;
+}
+
+.afghan-foods-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.afghan-foods-page .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.afghan-foods-page .section-title {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.afghan-foods-page .section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, var(--red), var(--green));
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+.afghan-foods-page .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.afghan-foods-page .card {
+  background-color: var(--gray);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.15);
+  transition: var(--transition);
+  transform: translateY(0);
+  position: relative;
+}
+
+.afghan-foods-page .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 255, 0, 0.2);
+}
+
+.afghan-foods-page .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.afghan-foods-page .card:hover img {
+  filter: brightness(1.1);
+}
+
+.afghan-foods-page .card-content {
+  padding: 20px;
+}
+
+.afghan-foods-page .card h3 {
+  font-size: 1.4rem;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.afghan-foods-page .card h3 i {
+  color: var(--gold);
+  transition: var(--transition);
+}
+
+.afghan-foods-page .card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.afghan-foods-page .card:hover h3 i {
+  transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+  .afghan-foods-page .section-title {
+    font-size: 2.2rem;
+  }
+
+  .afghan-foods-page .card p {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.tourism-section {
+  font-family: 'Raleway', sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tourism-section .tourism-title {
+  font-size: 2.8rem;
+  color: #ffbe0b;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.tourism-section .tourism-title::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(to right, #c1121f, #007f5f);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.tourism-section .province-card {
+  background-color: #1d1d1d;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+}
+
+.tourism-section .province-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 255, 127, 0.25);
+}
+
+.tourism-section .province-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 4px solid #ffbe0b;
+}
+
+.tourism-section .province-info {
+  padding: 25px 20px;
+}
+
+.tourism-section .province-name {
+  font-size: 1.8rem;
+  color: #00b894;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tourism-section .province-icon {
+  color: #ffbe0b;
+}
+
+.tourism-section .province-desc {
+  font-size: 1rem;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .tourism-section .province-card {
+    margin: 20px 10px;
+  }
+
+  .tourism-section .province-name {
+    font-size: 1.5rem;
+  }
+
+  .tourism-section .province-desc {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+.flag-container {
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.flag-header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.flag-main-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.flag-main-img:hover {
+  transform: scale(1.03);
+}
+
+.flag-page-title {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #ffc300;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.flag-page-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #d00000, #008000);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+.flag-entry {
+  background: #1c1c1c;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.flag-entry:hover {
+  transform: translateY(-5px);
+}
+
+.flag-entry-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ff99;
+  margin-bottom: 12px;
+}
+
+.flag-entry-text {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.7;
+}
